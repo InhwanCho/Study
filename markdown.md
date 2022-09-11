@@ -1,7 +1,6 @@
 # 마크다운 markdown 작성법 
 from https://gist.github.com/ihoneymon/652be052a0727ad59601
 
-# dfdf11111
 # 1. 마크다운에 관하여
 
 ## 1.1. 마크다운이란?
