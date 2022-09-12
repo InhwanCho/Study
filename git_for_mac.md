@@ -53,6 +53,13 @@ add명령어로 올린 파일들의 명령을 초기화시킴
 ###### 열기 open
 ###### 파일 확인(내용확인) cat ...
 ###### 히스토리 history
-
-
+#### cd 같은 명령어 뒤에 tap키 누르면 선택지에서 선택 가능
+다운로드(finder)파일을 누르고 cd 뒤로 드레그로 옮겨서 여는것도 가능
+###### 화면 세로 분할 command + d, 분할 해제 command + shift + d
+###### 새로운 터미널 command + n
+###### 속성 보기 command + i (화면 색상 및 정보 확인)
+###### 터미널 닫기 command + w
+###### 모든 탭 보기 또는 탭 개요 종료 command + shift + \
+# https://richwind.co.kr/50
+###### 파일을 나노 텍스트 편집기로 열기 nano 'mmm'
 
