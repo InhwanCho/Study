@@ -36,6 +36,8 @@ add명령어로 올린 파일들의 명령을 초기화시킴
 브랜치 생성(작업 후 add, commit까진 작업이 동일함) push를 git push 'branch name'으로 해야함
 ### git checkout 'branchname'
 브랜치 선택
+### git remote add origin http:...
+깃이랑 연결
 
 
 # 맥북 terminal 명령어
