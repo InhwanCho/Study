@@ -39,9 +39,9 @@ add명령어로 올린 파일들의 명령을 초기화시킴
 ### git remote add origin http:...
 깃이랑 연결
 ### git branch --merged 
-브렌치 합치기 ->
+브렌치 합치기 
 ### git branch -d 'branch name'
-브렌치 삭제
+브렌치 삭제(merge안하고 하면 경고뜸. 무시해도 됨)
 ### git branch -a
 브렌치 상황 보기
 ### git push origin --delete calc-divide
