@@ -46,6 +46,8 @@ add명령어로 올린 파일들의 명령을 초기화시킴
 브렌치 상황 보기
 ### git push origin --delete calc-divide
 삭제된 브렌치 메모리에서 완전 제거
+### git push --set-upstream origin 'branch name'
+브렌치에서 새로운 파일 생성 후 푸쉬할때 업스트림으로 세팅
 
 
 # 맥북 terminal 명령어
