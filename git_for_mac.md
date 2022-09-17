@@ -38,6 +38,14 @@ add명령어로 올린 파일들의 명령을 초기화시킴
 브랜치 선택
 ### git remote add origin http:...
 깃이랑 연결
+### git branch --merged 
+브렌치 합치기 ->
+### git branch -d 'branch name'
+브렌치 삭제
+### git branch -a
+브렌치 상황 보기
+### git push origin --delete calc-divide
+삭제된 브렌치 메모리에서 완전 제거
 
 
 # 맥북 terminal 명령어
@@ -50,7 +58,7 @@ add명령어로 올린 파일들의 명령을 초기화시킴
 ###### 화면 클리어 clear
 ###### 파일 생성 touch ...txt
 ###### 파일 삭제 rm ...
-###### 파일 이동 mv '파일이름' '폴더이름'
+###### 파일 이동 mv '파일이름' '폴더이름' - 다운로드 받은 파일 드레그로 끓어옮기기 가능.
 ###### 파일/디렉토리 이름 바꾸기 mv
 ###### 열기 open
 ###### 파일 확인(내용확인) cat ...
