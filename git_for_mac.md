@@ -77,3 +77,4 @@ add명령어로 올린 파일들의 명령을 초기화시킴
 #### 나노 텍스트 편집기로 열면 수정도 가능. 밑에 명령어 몇 개 사용 가능
 ###### 위 화살표 버튼을 눌러서 전에 수행한 명령어 불러오기 가능
 ###### 몇 개의 단어 입력 후 Tap키 누르면 자동완성 기능 수행하여 작업이 편해짐.
+###### 바탕화면 파일 숨김 ->Defaults write com.apple.finder CreateDesktop false && killall Finder (해제하려면 true)
