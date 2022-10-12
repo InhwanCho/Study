@@ -10,7 +10,7 @@
 깃에 연결할 폴더에 cd명령어로 이동 후, 해당 명령어 실행시 .git파일 생성(숨김 파일)됨과 동시에 깃페이지와 연결됨.
 ### git status
 파일 수정 후 상태 확인 창.
-### git add 'filename' or 
+### git add 'filename' or . 
 파일 수정 후 페이지에 변경할 파일명 등록 후 commit명령어 사용 가능
 ### git add -A
 -A 입력 시 전체 파일 add함
@@ -56,7 +56,7 @@ add명령어로 올린 파일들의 명령을 초기화시킴
 ###### 디렉토리 이동 cd 'nnn'
 ###### 디렉토리 되돌아가기 cd ..(바로 전 폴더로)
 ###### 디렉토리 생성(폴더 생성) mkdir   & 해당 폴더를 탭으로 ex)  touch test_directory/test_directory2
-###### 디렉토리 삭제 rmdir  or  rm -r(디렉토리에 파일이 있을 경우)
+###### 디렉토리 삭제 rmdir  or  rm -R(디렉토리에 파일이 있을 경우)
 ###### 화면 클리어 clear & command + 'k' 
 ###### 파일 생성 touch ...txt   & 해당 폴더를 탭으로 ex)  touch test_directory/test_filea.txt
 ###### 파일 삭제 rm ... 
@@ -72,12 +72,26 @@ add명령어로 올린 파일들의 명령을 초기화시킴
 ###### 속성 보기 command + i (화면 색상 및 정보 확인)
 ###### 터미널 닫기 command + w
 ###### 모든 탭 보기 또는 탭 개요 종료 command + shift + \
-## https://richwind.co.kr/50
+###### https://richwind.co.kr/50
 ###### 파일을 나노 텍스트 편집기로 열기 nano 'mmm'
 #### 나노 텍스트 편집기로 열면 수정도 가능. 밑에 명령어 몇 개 사용 가능
 ###### 위 화살표 버튼을 눌러서 전에 수행한 명령어 불러오기 가능
 ###### 몇 개의 단어 입력 후 Tap키 누르면 자동완성 기능 수행하여 작업이 편해짐.
 ###### 바탕화면 파일 숨김 ->Defaults write com.apple.finder CreateDesktop false && killall Finder (해제하려면 true)
+###### 파일 복사 cp filename newfilename
+### find
+###### find .(현재 디렉토리) -type f(file) -name 'test_1.text'
+if u dont know specific file name use the wild card
+###### like find .(현재 디렉토리) -type f(file) -name 'test*'
+-iname으로 하면 대소문자 구분없이 검색 가능
+##### find .(현재 디렉토리) -type f(file) -name 'test*' -maxdepth 1(현재 디렉토리)
+##### grep "some word" somefile.txt ->파일내에 해당 내용이 있는지 확인 가능
+
+
+. -> current directory(현재 폴더)
+.. -> perent directory(전 폴더)
+~ -> 폴더 자유롭게 참조할때
+
 ### 다운로드 받은 파일 쉽게 현재폴더(주피터노트북)으로 옮기기->
 1. terminal을 cd명령어로 주피터노트북의 폴더로 이동해둔다.
 2. (mv ~/Dow) 까지 입력 후 Tap키를 눌르고 다운받은 파일을 탭키를 이용하여 입력한다.
@@ -91,7 +105,7 @@ b == 아래 셀 생성
 c == 셀 복사
 x == 셀 자르기
 v == 셀 붙여넣기
-command + shift + '-' == 셀 나누기
+control + shift + '-' == 셀 나누기
 shift + m == 셀 합치기
 dd == 셀 삭제
 y == code 모드(셀)
