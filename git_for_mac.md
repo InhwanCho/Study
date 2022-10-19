@@ -7,7 +7,11 @@
 ### git config --list
 깃 유저,이메일 등록 후 등록 되었는지 확인
 ### git init
-깃에 연결할 폴더에 cd명령어로 이동 후, 해당 명령어 실행시 .git파일 생성(숨김 파일)됨과 동시에 깃페이지와 연결됨.
+깃에 연결할 폴더에 cd명령어로 이동 후, 해당 명령어 실행시 .git파일 생성(숨김 파일)됨과 동시에 깃명령어 수행하는 폴더로 변경
+### git clone ../StudyforGit(폴더 이름) 
+폴더에 clone하여 작업도 가능.. 홈페이지 사용 안하는것도 가능
+### git clone (보통 url)
+폴더나 url에 연결 url에 보통 연결
 ### git status
 파일 수정 후 상태 확인 창.
 ### git add 'filename' or . 
@@ -16,14 +20,15 @@
 -A 입력 시 전체 파일 add함
 ### git commit -m 'message'
 add한 파일들을 홈페이지에 올림.
-### git push
+### git push (-u)
 commit한 파일을 홈페이지에 확정으로 올림.
 ### git pull
 홈페이지에서 수정된 정보를 디렉토리와 비교해서 업데이트(혼자 작업할때는 거의 사용 안함)
-### touch .ignore
-디렉토리에있는 파일 중 깃에 올리고 싶지 않은 파일이 필요할때 생성 후 편집
-### git reset
-add명령어로 올린 파일들의 명령을 초기화시킴
+### touch .gitignore
+디렉토리에있는 파일 중 깃에 올리고 싶지 않은 파일이 필요할 경우 생성 후 편집
+ex) .gitignore 파일에 abc.text, *.csv  (이런식으로 와일드카드로 설정 가능) 
+### git reset 파일 이름 or git reset(모든 파일 초기화)
+add명령어로 올린 파일들의 명령을 초기화시킴 (add된 파일 working directory로 이동)
 ### git log
 여태까지 커밋한 로그를 보여줌 (메시지 중요)
 ### git remove -v
@@ -48,11 +53,12 @@ add명령어로 올린 파일들의 명령을 초기화시킴
 삭제된 브렌치 메모리에서 완전 제거
 ### git push --set-upstream origin 'branch name'
 브렌치에서 새로운 파일 생성 후 푸쉬할때 업스트림으로 세팅
-
+### git merge (branch name)
+-> git push origin master
 
 # 맥북 terminal 명령어
 ###### 현재 디렉토리 pwd
-###### 현재 디렉토리 파일리스트 보기 ls
+###### 현재 디렉토리 파일리스트 보기 ls  & 숨김파일까지 확인할 경우 ls -la
 ###### 디렉토리 이동 cd 'nnn'
 ###### 디렉토리 되돌아가기 cd ..(바로 전 폴더로)
 ###### 디렉토리 생성(폴더 생성) mkdir   & 해당 폴더를 탭으로 ex)  touch test_directory/test_directory2
