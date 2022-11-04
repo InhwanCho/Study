@@ -1,62 +1,61 @@
 
-# git command
+# git command (처음 등록할 경우)
+
 ### git --version
-깃이 깔렸는지 확인
+>깃이 깔렸는지 확인<br>
 ### git --help
-깃 명령어 확인(나가려면 q누르면 됨) 
-### git config --list
-깃 유저,이메일 등록 후 등록 되었는지 확인
+>깃 명령어 확인(나가려면 q누르면 됨) <br>
+### git config 
+>   >global user.name "your_name"<br>
+>   >git config --global user.email "your_email"<br>
+>   >git config --global user.password "your_token_password"<br>
+>   >   >git config --list  >깃 유저,이메일 등록 후 등록 되었는지 확인(화면 나가려면 q누르기)<br>
 ### git init
-깃에 연결할 폴더에 cd명령어로 이동 후, 해당 명령어 실행시 .git파일 생성(숨김 파일)됨과 동시에 깃명령어 수행하는 폴더로 변경
-### git clone ../StudyforGit(폴더 이름) 
-폴더에 clone하여 작업도 가능.. 홈페이지 사용 안하는것도 가능
+깃에 연결할 폴더에 cd 명령어로 이동 후, 해당 명령어 실행 시 .git파일 생성(숨김 파일)됨과 동시에 깃명령어 수행하는 폴더로 변경(iterm2를 사용할 경우 브런치네임이 나옴)<br>
 ### git clone (보통 url)
-폴더나 url에 연결 url에 보통 연결
+> git clone ../StudyforGit(repository name)<br>
+>   >상대방, 혹은 자신의 깃에 연결하여 다운받음<br>
+>   >폴더나 url에 연결 url에 보통 연결<br>
 ### git status
-파일 수정 후 상태 확인 창.
-### git add 'filename' or . 
-파일 수정 후 페이지에 변경할 파일명 등록 후 commit명령어 사용 가능
-### git add -A
--A 입력 시 전체 파일 add함
+파일 수정 후 상태 확인 창.(확인 할 필요는 없지만 초반에는 도움이 많이 되는 명령어)<br>
+### git add 'filename' or . or '-A'
+파일 수정 후 페이지에 변경할 파일명 등록. '.'이나 '-A'입력 시 폴더 전체를 등록함<br>
 ### git commit -m 'message'
-add한 파일들을 홈페이지에 올림.
+add한 파일들을 홈페이지에 올림.<br>
 ### git push (-u)
-commit한 파일을 홈페이지에 확정으로 올림.
+commit한 파일을 홈페이지에 확정으로 올림. 파일이 처음 생성된 경우 <br>
+>git push origin master로 입력해야함<br>
 ### git pull
-홈페이지에서 수정된 정보를 디렉토리와 비교해서 업데이트(혼자 작업할때는 거의 사용 안함)
+홈페이지에서 수정된 정보를 디렉토리와 비교해서 업데이트(혼자 작업할때는 거의 사용 안함)<br>
 ### touch .gitignore
-디렉토리에있는 파일 중 깃에 올리고 싶지 않은 파일이 필요할 경우 생성 후 편집
-ex) .gitignore 파일에 abc.text, *.csv  (이런식으로 와일드카드로 설정 가능) 
+디렉토리에있는 파일 중 깃에 올리고 싶지 않은 파일이 필요할 경우 생성 후 편집<br>
+ex) .gitignore 파일에 abc.text, *.csv  (이런식으로 와일드카드로 설정 가능) <br>
 ### git reset 파일 이름 or git reset(모든 파일 초기화)
-add명령어로 올린 파일들의 명령을 초기화시킴 (add된 파일 working directory로 이동)
+add명령어로 올린 파일들의 명령을 초기화시킴 (add된 파일 working directory로 이동)<br>
 ### git log
-여태까지 커밋한 로그를 보여줌 (메시지 중요)
-### git remove -v
-깃허브와 연결된 디렉토리를 확인해줌
+여태까지 커밋한 로그를 보여줌 (커밋 메시지 중요)<br>
 ### git branch -a
-현재 연결된 브렌치를 확인 *로 표시됨.
+현재 연결된 브렌치를 확인 *로 표시됨.<br>
 ### git diff
-파일 수정 후 변경된 부분을 표시하는 명령어
+파일 수정 후 변경된 부분을 표시하는 명령어<br>
 ### git branch 'name'
-브랜치 생성(작업 후 add, commit까진 작업이 동일함) push를 git push 'branch name'으로 해야함
+브랜치 생성(작업 후 add, commit까진 작업이 동일함) push를 git push 'branch name'으로 해야함<br>
 ### git checkout 'branchname'
-브랜치 선택
+브랜치 선택<br>
 ### git remote add origin http:...
-깃이랑 연결(파일 처음 커밋하려면 푸시 안됨 이거 먼저 해줘야 함)
+깃이랑 연결(파일 처음 커밋하려면 푸시 안됨 이거 먼저 해줘야 함)<br>
 ### git branch --merged 
-브렌치 합치기 
+브렌치 합치기 <br>
 ### git branch -d 'branch name'
-브렌치 삭제(merge안하고 하면 경고뜸. 무시해도 됨)
+브렌치 삭제(merge안하고 하면 경고뜸. 무시해도 됨)<br>
 ### git branch -a
-브렌치 상황 보기
+브렌치 상황 보기<br>
 ### git push origin --delete calc-divide
-삭제된 브렌치 메모리에서 완전 제거
+삭제된 브렌치 메모리에서 완전 제거<br>
 ### git push --set-upstream origin 'branch name'
-브렌치에서 새로운 파일 생성 후 푸쉬할때 업스트림으로 세팅
+브렌치에서 새로운 파일 생성 후 푸쉬할때 업스트림으로 세팅<br>
 ### git merge (branch name)
--> git push origin master
-
-
+-> git push origin master<br>
 
 # 맥북 terminal 명령어
 ###### 현재 디렉토리 pwd
