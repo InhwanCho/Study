@@ -42,7 +42,7 @@ add명령어로 올린 파일들의 명령을 초기화시킴 (add된 파일 wor
 ### git checkout 'branchname'
 브랜치 선택
 ### git remote add origin http:...
-깃이랑 연결
+깃이랑 연결(파일 처음 커밋하려면 푸시 안됨 이거 먼저 해줘야 함)
 ### git branch --merged 
 브렌치 합치기 
 ### git branch -d 'branch name'
@@ -55,6 +55,8 @@ add명령어로 올린 파일들의 명령을 초기화시킴 (add된 파일 wor
 브렌치에서 새로운 파일 생성 후 푸쉬할때 업스트림으로 세팅
 ### git merge (branch name)
 -> git push origin master
+
+
 
 # 맥북 terminal 명령어
 ###### 현재 디렉토리 pwd
@@ -92,7 +94,7 @@ if u dont know specific file name use the wild card
 -iname으로 하면 대소문자 구분없이 검색 가능
 ##### find .(현재 디렉토리) -type f(file) -name 'test*' -maxdepth 1(현재 디렉토리)
 ##### grep "some word" somefile.txt ->파일내에 해당 내용이 있는지 확인 가능
-
+##### 폴더 혹은 파일 위치 찾기 which f(filename)
 
 . -> current directory(현재 폴더)
 .. -> perent directory(전 폴더)
