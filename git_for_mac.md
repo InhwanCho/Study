@@ -43,7 +43,8 @@ add명령어로 올린 파일들의 명령을 초기화시킴 (add된 파일 wor
 ### git checkout 'branchname'
 브랜치 선택<br>
 ### git remote add origin http:...
-깃이랑 연결(파일 처음 커밋하려면 푸시 안됨 이거 먼저 해줘야 함)<br>
+깃이랑 폴더를 연결<br>
+(파일 처음 커밋하려면 푸시 안됨 이거 먼저 해줘야 함)<br>
 ### git branch --merged 
 브렌치 합치기 <br>
 ### git branch -d 'branch name'
@@ -56,6 +57,26 @@ add명령어로 올린 파일들의 명령을 초기화시킴 (add된 파일 wor
 브렌치에서 새로운 파일 생성 후 푸쉬할때 업스트림으로 세팅<br>
 ### git merge (branch name)
 -> git push origin master<br>
+# gti team project
+### git clone 주소 폴더이름
+주소는 깃허브에서 들고와야함
+폴더이름은 선택사항이다 (즉 없어도됨) 폴더이름을 줄경우에는 그 폴더가 새로 생성이 되면서 그 안에 코드들이 다운로드가 되고, 폴더이름을 안줄경우엔 깃허브 프로젝트 이름으로 폴더가 자동으로 생기고 그안에 코드들이 다운로드된다.
+Github에서 내 브렌치(branch)만들기
+
+### git checkout -b 브렌치이름
+내 브렌치에 소스코드 업데이트하기
+
+### git add .
+git commit -m "first commit"
+git push origin 브렌치이름
+마스터 브렌치에 소스 가져오기(pull)
+
+### git pull origin master
+pull을 하기전에는 기존에 소스코드들을 commit을 먼저 해놔야 한다 (2탄 강의참조)
+
+브렌치끼리 이동하는 법
+### git checkout 브렌치이름
+강의에서 소개하진 않았지만 내가 내 브렌치에서 마스터 브렌치로 이동을 하고 싶거나 다른 브렌치로 이동하고싶으면 해당 명령어를 쓰면 된다
 
 # 맥북 terminal 명령어
 ###### 현재 디렉토리 pwd
@@ -94,6 +115,7 @@ if u dont know specific file name use the wild card
 ##### find .(현재 디렉토리) -type f(file) -name 'test*' -maxdepth 1(현재 디렉토리)
 ##### grep "some word" somefile.txt ->파일내에 해당 내용이 있는지 확인 가능
 ##### 폴더 혹은 파일 위치 찾기 which f(filename)
+##### rm -R filename,,, <해당 파일(혹은 폴더) 강제 삭제
 
 . -> current directory(현재 폴더)
 .. -> perent directory(전 폴더)
