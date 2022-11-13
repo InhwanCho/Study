@@ -30,7 +30,7 @@ commit한 파일을 홈페이지에 확정으로 올림. 파일이 처음 생성
 ### touch .gitignore
 디렉토리에있는 파일 중 깃에 올리고 싶지 않은 파일이 필요할 경우 생성 후 편집<br>
 ex) .gitignore 파일에 abc.text, *.csv  (이런식으로 와일드카드로 설정 가능) <br>
-### git reset 파일 이름 or git reset(모든 파일 초기화)
+### git reset 파일 이름 or git reset --hard [logname,ex)8658a77dd22574df42daec548875275508053996]
 add명령어로 올린 파일들의 명령을 초기화시킴 (add된 파일 working directory로 이동)<br>
 ### git log
 여태까지 커밋한 로그를 보여줌 (커밋 메시지 중요)<br>
