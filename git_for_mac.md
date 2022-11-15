@@ -30,9 +30,13 @@ commit한 파일을 홈페이지에 확정으로 올림. 파일이 처음 생성
 ### touch .gitignore
 디렉토리에있는 파일 중 깃에 올리고 싶지 않은 파일이 필요할 경우 생성 후 편집<br>
 ex) .gitignore 파일에 abc.text, *.csv  (이런식으로 와일드카드로 설정 가능) <br>
-### git reset 파일 이름 or git reset --hard [logname,ex)8658a77dd22574df42daec548875275508053996]
-add명령어로 올린 파일들의 명령을 초기화시킴 (add된 파일 working directory로 이동)<br>
-### git log
+### git reset --hard [abdc0123]  -> git revert [abcd0123] --no-edit ->git push
+git 파일 이미 푸쉬한거 제거(push까지 해야 깃허브에서까지 제거) revert랑 차이점 찾아야함
+##### git revert [abcd0123] --no-edit ->git push
+git 파일 이미 푸쉬한거 제거(push까지 해야 깃허브에서까지 제거) 일반적으로 revert가 좋은 선택지로 보임
+<br>
+
+### git log // git log --oneline -n 3
 여태까지 커밋한 로그를 보여줌 (커밋 메시지 중요)<br>
 ### git branch -a
 현재 연결된 브렌치를 확인 *로 표시됨.<br>

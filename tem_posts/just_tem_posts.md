@@ -32,4 +32,33 @@ Money : 100, Love : 100 등장 <br>
  가 : 1, 나 : 0, 다 : 9
  가 : 1, 나 : 0, 다 : 8
 ```
-TF(DTM) @ IDF = TFIDF
+TF(DTM) * IDF = TFIDF
+
+# SVM Algorithm
+
+>결정 경계선(decision boundary)을 만들고 그 경계에 따라 값을 나누는 알고리즘
+
+커널트릭
+### 선형 SVM
+선형 SVM : 커널을 사용하지 않고 데이터를 분류
+`비용(C)`을 조절해서 마진의 크기를 조절할 수 있음
+커널 트릭 : 선형 분리가 주어진 차원에서 불가능할 경우 -> 고차원으로 데이터를 옮기는 효과를 통해 결정 경계를 찾음.
+`비용(C)`과 `gamma`를 조절해서 마진(점과 support vector사이의 거리)을 조절 가능.
+
+주요 파라미터 <u>C</u> , <u>gamma</u>
+`C`가 높으면 마진은 작아지고, 학습 에러율은 감소하는 방향으로 경계선을 만듦.<br>
+-> 훈련데이터의 정확도는 높아질 수 있지만, 실제 데이터의 분류는 잘 안될 수 있다.
+
+### 가우시안 RBF 커널
+
+# 머신러닝 평가방법
+TP(True,True), FP(False, but True), FN(False, False), TN(True, False)
+ACC : TP + TN / all (높은게 좋음)  
+
+recall : TP/ TP + FN
+**(실제 True인 데이터 중 모델이 True로 예측, 높은게 좋음)**
+
+precisoion : TP / TP + FP
+**(예측이 True인 데이터 중에서 실제로 True데이터의 비중, 높은게 좋음)**
+
+F1-score : recall과 precision 의 조화평균
