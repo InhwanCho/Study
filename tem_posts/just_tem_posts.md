@@ -62,3 +62,33 @@ precisoion : TP / TP + FP
 **(예측이 True인 데이터 중에서 실제로 True데이터의 비중, 높은게 좋음)**
 
 F1-score : recall과 precision 의 조화평균
+
+# 데이터 전처리
+### 변수별로 데이터를 묶어서 전처리하면 편함 
+- 연속형 : 나이, 가격, 점수, ...
+- 범주형 : 성별, 애완동물, ...
+* 척도(Scale) : 변수 값을 표현하는 수준.
+    * `명명척도` : 혈액형(순서X, 사칙연산 X, 빈도수 O)
+    * `서열척도` : 직급(순서O, 사칙연산 X, 직급 사이의 간격 일정하지 않음)
+    * `등간척도` : 섭씨온도(간격 일정, 연산 O, 섭시 30도씨 but 30도가 10도보다 3배 따듯하지 않다!(영점(기준)이 임의적이다.)
+    * `비율척도` : 등간척도 + 절대영점 >> ex) 수심 10미터는 5미터보다 2배 깊다.
+- 중심경향치 : 평균, 중위수, 빈도수
+- 변산성 측정치 : 분산, 표준편차, 범위, 사분위
+### 상관계수 
+- 피어슨 상관계수 : 등간/ 비율 척도
+- 스피어만 상관계수 : 비선형
+- 켄달(kendall) : 비선형, 서열 척도, 표본이 작을경우 효율적이다
+> 상관관계가 있다고 반드시 <u>`인과관계`</u>가 있는것이 아니다!!
+```python
+import scipy.stats as ss
+ss.spearmanr(x,y).correlation
+ss.kendalltau(x,y).correlation
+ss.pearsonr(x,y).statistic
+```
+- 왜도(skew) : 치우쳐 있는 모양.<br>
+왼쪽으로 치우쳐 있으면 positive skewed, 오른쪽이면 negative skewed
+    - 왜도>0 : 평균에 비해 많이 큰 값이 존재 (mean > median > mode(최빈수))
+    - 왜도<0 : 평균에비해 많이 작은 값이 존재 (mean< median < mode(최빈수))
+    - 정규 분포의 경우 (mean == median == mode)
+    - Goal : Minimize cost(W,b)
+- 첨도(kurtosis) : 뾰족한 정도.<br>
