@@ -35,6 +35,8 @@ git 파일 이미 푸쉬한거 제거(push까지 해야 깃허브에서까지 �
 ##### git revert [abcd0123] --no-edit ->git push
 git 파일 이미 푸쉬한거 제거(push까지 해야 깃허브에서까지 제거) 일반적으로 revert가 좋은 선택지로 보임
 <br>
+#### git revert -m 1 [abcd0321] 
+revert한 로그를 다시 revert하기 (1으로 머지)
 
 ### git log // git log --oneline -n 3
 여태까지 커밋한 로그를 보여줌 (커밋 메시지 중요)<br>
@@ -82,6 +84,10 @@ pull을 하기전에는 기존에 소스코드들을 commit을 먼저 해놔야 
 ### git checkout 브렌치이름
 강의에서 소개하진 않았지만 내가 내 브렌치에서 마스터 브렌치로 이동을 하고 싶거나 다른 브렌치로 이동하고싶으면 해당 명령어를 쓰면 된다
 
+
+
+
+
 # 맥북 terminal 명령어
 ###### 현재 디렉토리 pwd
 ###### 현재 디렉토리 파일리스트 보기 ls  & 숨김파일까지 확인할 경우 ls -la
@@ -120,6 +126,7 @@ if u dont know specific file name use the wild card
 ##### grep "some word" somefile.txt ->파일내에 해당 내용이 있는지 확인 가능
 ##### 폴더 혹은 파일 위치 찾기 which f(filename)
 ##### rm -R filename,,, <해당 파일(혹은 폴더) 강제 삭제
+##### crt + u < 터미널에 쓰고있던 타이핑 전체 지우기
 
 . -> current directory(현재 폴더)
 .. -> perent directory(전 폴더)

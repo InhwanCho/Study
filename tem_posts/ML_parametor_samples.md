@@ -70,11 +70,48 @@ lin = LinearRegression()
 lin.fit(X,y)
 pred = lin.predict(df[['diameter','shell_weight','height']])
 df['whole_weight'].fillna(pd.Series(pred))
+#data['Close'] = np.where(data['Close'].isnull(), pd.Series(pred.flatten()), data['Close'])
 pd.Series(pred)
 ```
 
-### 야후 증권 데이터 따오기
+### pandas datatime 뽑아오기
 ```python
+train['datetime'] = pd.to_datetime(train['datetime'])
+train['year'] = train['datetime'].dt.year
+train['hour'] = train['datetime'].dt.hour
+train['weekday'] = train['datetime'].dt.weekday
+```
+
+### ols(다중 공선성) 파악하기
+```python
+from statsmodels.formula.api import ols
+model = ols('target ~ sat + weight + width', df) #열 이름(target,나머지)
+res = model.fit()
+res.summary()
+```
+
+### 특성공학(feature engineering)
+```python
+train['idle'] = train[['atemp','windspeed','humidity']].apply(lambda x : 
+                (0, 1)[x['atemp'] > 22 and x['windspeed'] < 30 and x['humidity'] <50], axis = 1)
+```
+
+### boxcox(skew를 균등하게 만들어줌)
+```python
+from scipy.stats import boxcox 
+train['Wind_speed_log'] ,lam= boxcox(train['windspeed'].values +1)
+test['Wind_speed_log'] = boxcox(test['windspeed'].values+1, lam)
+```
+
+### PCA(차원축소) - 임시?
+```python
+X = df[['calory', 'breakfast', 'lunch', 'dinner', 'exercise']]
+Y = df[['body_shape']]
+x_std = StandardScaler().fit_transform(X)
+features = x_std.T #(중요)
+covariance_matrix = np.cov(features)
+eig_vals, eig_vecs = np.linalg.eig(covariance_matrix)
+projected_X = x_std.dot(eig_vecs.T[0]) / np.linalg.norm(eig_vecs.T[0])
 ```
 
 - RS모델, knn for문 따오기
