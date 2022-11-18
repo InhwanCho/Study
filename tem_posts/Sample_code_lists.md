@@ -1,3 +1,5 @@
+
+
 # parquet(메모리 줄여줌)
 ```python
 import gc
@@ -24,6 +26,7 @@ EVAL = False
 ```python
 train.query('month==7 and year==2022 and day>15')
 ```
+
 ### Labelencoding(train과 test데이터의 값이 다를 경우)
 ```python
 for i in str_col:
