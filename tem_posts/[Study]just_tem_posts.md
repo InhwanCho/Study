@@ -25,7 +25,7 @@ Money : 100, Love : 100 등장 <br>
 금융 코퍼스 : [예금, 잔금, 고객, 선물, 증권, ...]
 
 ## TF-IDF(Term Frequency *(행렬곱이 아님) Inverse Document Frequency)
-- 흔할 말이 아니고 생소한 단어들이 특정 문서에 나타나는 등장횟수
+- 흔한 말이 아니고 생소한 단어들이 특정 문서에 나타나는 등장횟수
 > ex) 문서1-
 ```markdown
  가 : 1, 나 : 3, 다 : 5
