@@ -26,7 +26,7 @@ parser = trt.OnnxParser(network, logger) : Onnx 모델을 parsing 해주는 역�
 
 ### 코드를 통해 분석하기
 
-```
+```python
 logger = trt.Logger(trt.Logger.WARNING)  # create Logger, avaiable level: VERBOSE, INFO, WARNING, ERRROR, INTERNAL_ERRO기
 
 builder = trt.Builder(logger)  # create Builder
@@ -66,7 +66,7 @@ with open(trtFile, "wb") as f:  # create engine
 
 ### TensorRT Inference(trt 추론)
 
-```
+```python
 #trt engine open
 f = open(trtFile, "rb")
 logger = trt.Logger(trt.Logger.WARNING)
